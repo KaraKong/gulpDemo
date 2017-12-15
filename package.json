@@ -1,0 +1,17 @@
+{
+  "name": "test_app",
+  "version": "1.0.0",
+  "description": "use gulp to make an app",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test gulp"
+  },
+  "author": "kara",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-zip": "^4.0.0"
+  }
+}
