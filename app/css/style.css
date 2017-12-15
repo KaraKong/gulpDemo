@@ -1,1 +1,43 @@
-.menu ul{display:block;line-break:normal}.menu ul li{list-style:none;display:none}h1.title{font-family:"Helvetica Neue",Helvetica,STHeiTi,sans-serif;background:#c0c;width:100%;font-size:.6rem;height:1.5rem;display:flex;justify-content:center;margin:0}body{margin:0;padding:0}.ccl{background:#2d56e4;color:#fff;font-size:20px;padding:20px 0;text-align:center}
+.menu ul {
+    display: block;
+    line-break: normal
+}
+
+.menu ul li {
+    list-style: none;
+    display: none
+}
+
+h1.title {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    background: #c0c;
+    width: 100%;
+    font-size: .6rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0
+}
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+.ccl {
+    background: #2d56e4;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+    background: repeating-radial-gradient(red ,green,blue 100%);
+}
+.llss{
+	transition: all 0.6s ease-out;
+	transition-timing-funtion:ease-in;
+    cursor: pointer;
+    transform-origin: left;
+}
+.llss:hover{
+	transform: skew(60deg);  
+}

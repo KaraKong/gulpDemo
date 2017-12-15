@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     zip = require('gulp-zip'),
     babel = require("gulp-babel"),
+    autoprefixer = require('gulp-autoprefixer'), // 自动添加CSS3浏览器前缀
     connect = require('gulp-connect');//livereload
 
 var jsSrc = 'app/js/*.js';
@@ -50,6 +51,13 @@ gulp.task('jsTask', function () {
 //定义名为cssTask的任务
 gulp.task('cssTask', function () {
     return gulp.src(cssSrc)
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions','last 2 Explorer versions','last 3 Safari versions','Firefox >= 20','> 5%','Android >= 4.0'],
+            cascade: true, //是否美化属性值 默认：true 像这样：
+            //-webkit-transform: rotate(45deg);
+            //        transform: rotate(45deg);
+            remove:false //是否去掉不必要的前缀 默认：true 
+        }))
         .pipe(minifyCss()) //压缩css
         .pipe(gulp.dest(cssDist))
         .pipe(browserSync.stream());
